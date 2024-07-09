@@ -1,0 +1,29 @@
+#root.root {--status-active: #827AAD;}
+#root.root {--scroll-progress-bg: #827AAD;}
+#root.root {--nav-btn-accent: #827AAD;}
+#root.root {--frame-el-overlay-selected-border: #827AAD;}
+#root.root {--toolbar-el-overlay-selected-border: #827AAD;}
+#root.root {--tabs-activated-bg: #343434;}
+#root.root {--nav-delimiter-size: 8px;}
+#root.root {--frame-bg: #272727;}
+#root.root {--s-accent: #827AAD;}
+
+.SearchBar:before {
+  background-color:var(--frame-bg);
+}
+
+.SearchBar[data-focused=false]:before {
+  box-shadow:inset 0 0 0 1px #111111;
+}
+
+.SearchBar[data-focused=true]:before {
+  box-shadow:inset 0 0 0 2px var(--accent)
+}
+
+.top-horizontal-box {
+  order: 100
+}
+
+.NavigationBar {
+	background-color: var(--frame-bg);
+}

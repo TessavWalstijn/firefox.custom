@@ -1,0 +1,107 @@
+/* #region control buttons */
+@media (-moz-bool-pref: 'custom.css.no-tabs.enabled') {
+  /* hides the tabs */
+  #tabbrowser-tabs {
+    visibility: collapse;
+  }
+
+  /* right side of buttons container */
+  /* all tabs button */
+  /* recent browsing button if not moved */
+  /* minimize, fullscreen, close button */
+  #navigator-toolbox {
+    display: flex;
+    flex-flow: row wrap;
+    /* set background color equal to the rest */
+    background-color: var(--toolbar-bgcolor) !important;
+    background-image: var(--toolbar-bgimage) !important;
+  }
+
+  @media (-moz-bool-pref: 'custom.css.rounded-corners.enabled') {
+    #navigator-toolbox {
+      /* adding a bit more space to align url bar in the middle */
+      padding-top: 6px;
+    }
+  }
+
+  #titlebar {
+    order: 1;
+    /* better alignment at the right */
+    max-width: 76px;
+  }
+
+  #titlebar #TabsToolbar {
+    background-color: var(--toolbar-bgcolor);
+    background-image: var(--toolbar-bgimage);
+  }
+  #titlebar #TabsToolbar .titlebar-spacer {
+    background-color: rgba(0, 0, 0, 0.05);
+    margin: 3px;
+    border-radius: 25%;
+    cursor: grab;
+  }
+
+  #titlebar #TabsToolbar .titlebar-spacer[type='pre-tabs'] {
+    display: none;
+  }
+
+  :root #nav-bar {
+    order: 0;
+    /* makes sure navbar does not clip outside window */
+    border-top-left-radius: 12px;
+    /* make sure control buttons are still in view */
+    width: calc(100% - 157px);
+  }
+
+  /* make sure buttons are still in view with default Firefox icons there */
+  :root:has(#TabsToolbar-customization-target > #Firefox-view-button) #nav-bar {
+    width: calc(100% - (157px + 38px));
+  }
+
+  /* make sure control buttons are still in view on customization page */
+  :root:has(#customization-container:not([hidden='true'])) #nav-bar {
+    width: calc(100% - 220px);
+  }
+
+  #PersonalToolbar {
+    order: 2;
+  }
+
+  /* #region tab toolbar buttons */
+  .toolbar-items .toolbarbutton-1 {
+    /* give buttons correct size */
+    --toolbarbutton-inner-padding: 9px;
+  }
+
+  #TabsToolbar-customization-target > .toolbarbutton-1 {
+    display: none !important;
+  }
+
+  #TabsToolbar-customization-target .toolbarbutton-1 {
+    display: flex;
+  }
+
+  #TabsToolbar-customization-target #alltabs-button {
+    display: flex !important;
+  }
+
+  #TabsToolbar-customization-target #Firefox-view-button {
+    display: flex !important;
+  }
+
+  /* center buttons when in customize toolbar */
+  .toolbar-items #wrapper-alltabs-button,
+  .toolbar-items #wrapper-Firefox-view-button,
+  /* center buttons when outside browser toolbar */
+  #TabsToolbar-customization-target > #Firefox-view-button,
+  #TabsToolbar-customization-target > #alltabs-button {
+    margin-bottom: 5px !important;
+  }
+
+  #Firefox-view-button .toolbarbutton-icon:hover,
+  #alltabs-button .toolbarbutton-badge-stack:hover {
+    background-color: #696969 !important;
+  }
+  /* #endregion */
+}
+/* #endregion */

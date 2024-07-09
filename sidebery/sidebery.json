@@ -1,0 +1,11 @@
+{
+  "settings": {
+    "ctxMenuNative": true,
+    "navBarInline": false,
+    "hideEmptyPanels": false,
+    "containersSortByName": true,
+    "searchBarMode": "static",
+    "colorizeTabsSrc": "container"
+  },
+  "ver": "5.2.0"
+}
