@@ -1,5 +1,11 @@
 # Firefox.custom Changelog
 
+## Release v0.0.2 - 2024-07-11
+
+### Fixed
+
+Control buttons not fully in view on windows [#1](https://github.com/TessavWalstijn/firefox.custom/issues/1)
+
 ## Release v0.0.1 - 2024-07-09
 
 ### Added

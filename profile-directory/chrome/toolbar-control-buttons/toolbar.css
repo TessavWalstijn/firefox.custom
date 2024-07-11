@@ -63,6 +63,24 @@
     width: calc(100% - 220px);
   }
 
+  /* makes sure control buttons are in view on windows */
+  @media (-moz-platform: windows) {
+    :root #nav-bar {
+      /* make sure control buttons are still in view */
+      width: calc(100% - 188px);
+    }
+  
+    /* make sure buttons are still in view with default Firefox icons there */
+    :root:has(#TabsToolbar-customization-target > #Firefox-view-button) #nav-bar {
+      width: calc(100% - (188px + 38px));
+    }
+  
+    /* make sure control buttons are still in view on customization page */
+    :root:has(#customization-container:not([hidden='true'])) #nav-bar {
+      width: calc(100% - 250px);
+    }
+  }
+
   #PersonalToolbar {
     order: 2;
   }
